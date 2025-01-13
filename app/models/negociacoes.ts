@@ -1,7 +1,8 @@
 import { Negociacao } from "./negociacao.js";
 
 export class Negociacoes {
-    private negociacoes: Array<Negociacao> = [];
+    //private negociacoes: Array<Negociacao> = []; //Pode ser simplificado utilizando a sintaxe a seguir:
+    private negociacoes: Negociacao[] = [];
 
     adiciona(negociacao: Negociacao): void {
         this.negociacoes.push(negociacao);
@@ -13,7 +14,11 @@ export class Negociacoes {
     //                                   //Como alternativa, temos o ReadOnlyArray, apresentado a seguir.
     // }
 
-    lista (): ReadonlyArray<Negociacao> { //Utilizar ReadonlyArray para evitar alterações no array original.
+    // lista (): ReadonlyArray<Negociacao> { //Utilizar ReadonlyArray para evitar alterações no array original.
+    //     return this.negociacoes;          //Pode ser simplificado utilizando a sintaxe a seguir:
+    // }
+
+    lista (): readonly Negociacao[] {
         return this.negociacoes;
     }
 }

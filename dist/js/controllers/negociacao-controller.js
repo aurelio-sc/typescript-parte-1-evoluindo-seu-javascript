@@ -2,7 +2,7 @@ import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
 export class NegociacaoController {
     constructor() {
-        this.negociacoes = new Negociacoes(); //COmo a variável está sendo inicializada, posso suprimir sua tipagem. O TS entende que é do tipo Negociacoes
+        this.negociacoes = new Negociacoes(); //Como a variável está sendo inicializada, posso suprimir sua tipagem. O TS entende que é do tipo Negociacoes
         this.inputData = document.querySelector('#data');
         this.inputQuantidade = document.querySelector('#quantidade');
         this.inputValor = document.querySelector('#valor');

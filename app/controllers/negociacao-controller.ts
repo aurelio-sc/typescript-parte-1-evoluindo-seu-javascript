@@ -5,7 +5,7 @@ export class NegociacaoController {
     private inputData: HTMLInputElement;
     private inputQuantidade: HTMLInputElement;
     private inputValor: HTMLInputElement;
-    private negociacoes = new Negociacoes(); //COmo a variável está sendo inicializada, posso suprimir sua tipagem. O TS entende que é do tipo Negociacoes
+    private negociacoes = new Negociacoes(); //Como a variável está sendo inicializada, posso suprimir sua tipagem. O TS entende que é do tipo Negociacoes
 
     constructor() {
         this.inputData = document.querySelector('#data');
