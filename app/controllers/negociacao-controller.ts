@@ -1,9 +1,11 @@
 import { Negociacao } from "../models/negociacao.js";
+import { Negociacoes } from "../models/negociacoes.js";
 
 export class NegociacaoController {
     private inputData: HTMLInputElement;
     private inputQuantidade: HTMLInputElement;
     private inputValor: HTMLInputElement;
+    private negociacoes = new Negociacoes(); //COmo a variável está sendo inicializada, posso suprimir sua tipagem. O TS entende que é do tipo Negociacoes
 
     constructor() {
         this.inputData = document.querySelector('#data');
@@ -26,7 +28,8 @@ export class NegociacaoController {
 
     adiciona(): void {
         const negociacao = this.criaNeociacao();
-        console.log(negociacao);
+        this.negociacoes.adiciona(negociacao);
+        console.log(this.negociacoes.lista());
         this.limparFormulario();
     }
 
